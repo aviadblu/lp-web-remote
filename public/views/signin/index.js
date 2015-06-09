@@ -7,6 +7,7 @@
                 .state('signin', {
                     url: '/signin',
                     controller: 'SigninCtrl',
+                    controllerAs: 'ctrl',
                     templateUrl: 'views/signin/signin.html'
                 })
         }]);

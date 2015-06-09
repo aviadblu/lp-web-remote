@@ -72,4 +72,16 @@ router.get('/list', function (req, res) {
 });
 
 
+router.get('/login', function (req, res) {
+    var secret = req.query.secret;
+    var server;
+    if(pass[secret]) {
+        server = servers[pass[secret]];
+        res.send(server);
+    }
+
+    res.status(401).send("Unauthorized");
+});
+
+
 module.exports = router;

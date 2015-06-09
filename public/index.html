@@ -4,54 +4,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
     <link href="bower_components/bootstrap/dist/css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="assets/css/style.css" rel="stylesheet" />
 </head>
 <body>
 <div class="container">
-    hello
-    <h1>h1 demo</h1>
-
-
     <div ui-view></div>
-    <!-- We'll also add some navigation: -->
-    <a ui-sref="signin">signin</a>
-    <a ui-sref="app.dashboard">dashboard</a>
-
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Email address</label>
-            <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputPassword1">Password</label>
-            <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputFile">File input</label>
-            <input type="file" id="exampleInputFile">
-            <p class="help-block">Example block-level help text here.</p>
-        </div>
-        <div class="checkbox">
-            <label>
-                <input type="checkbox"> Check me out
-            </label>
-        </div>
-        <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-
-
-    <!-- keyboard plugin start-->
-    <link rel="stylesheet" href="assets/css/jsKeyboard.css" />
-    <script src="assets/js/vendor/jquery-1.9.1.min.js"></script>
-    <script type="text/javascript" src="assets/js/jsKeyboard.js"></script>
-    <script>
-        $(function () {
-            jsKeyboard.init();
-            jsKeyboard.setSize("small");
-            //jsKeyboard.destroy();
-        });
-    </script>
-    <!-- keyboard plugin end -->
-
 </div>
 
 
@@ -68,6 +25,8 @@
 <script src="views/app/index.js"></script>
 <script src="views/app/dashboard/index.js"></script>
 <script src="views/app/dashboard/dashboard.controller.js"></script>
+
+<script src="factories/game_server.factory.js"></script>
 
 
 </body>

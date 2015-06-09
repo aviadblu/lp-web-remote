@@ -8,7 +8,7 @@
 
     angular
         .module('factories', [
-
+            'factories.game_server'
         ]);
 
     angular
@@ -48,7 +48,14 @@
         }])
 
         .config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
-            $urlRouterProvider.otherwise("/signin");
+
+            if(localStorage.gameData) {
+                $urlRouterProvider.otherwise("/signin");
+            }
+            else {
+                $urlRouterProvider.otherwise("/dashboard");
+            }
+
         }]);
 
 })(window, window.angular);
