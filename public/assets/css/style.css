@@ -1,7 +1,57 @@
+html, body {
+  height: 100%; }
+
 body {
-	background-color: #93CDA4;
-}
+  color: #fff; }
+
+#page-loading {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  z-index: 9999;
+  height: 100%;
+  width: 100%;
+  background-image: url("../images/spiffygif_46x46.gif");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: #000;
+  opacity: 0.8;
+  filter: alpha(opacity=80);
+  -webkit-transition: all 300ms ease-in-out;
+  transition: all 300ms ease-in-out; }
+
+.container {
+  height: 100%;
+  width: 100%;
+  max-width: 640px;
+  border: 1px solid black;
+  background-image: url("../images/bg.jpg");
+  background-position: center top;
+  background-repeat: repeat-y;
+  background-size: 100%; }
+
+header {
+  width: 100%;
+  text-align: center; }
+  header img {
+    width: 100%;
+    max-width: 350px;
+    max-height: 100px; }
 
 .signin {
-	margin-top:200px;
-}
+  margin-top: 10%; }
+  .signin .btn {
+    width: 100%; }
+  .signin .response {
+    margin-top: 10px;
+    color: red; }
+
+.view-container {
+  margin-top: 20px; }
+
+.remotecontroll {
+  margin-top: 50px; }
+  .remotecontroll h3 {
+    text-align: center; }
+  .remotecontroll .answer_btn {
+    margin-bottom: 10px; }

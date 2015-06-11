@@ -1,9 +1,10 @@
 <div class="signin">
     <form ng-submit="ctrl.login()">
         <div name="gameLoginForm" class="form-group">
-            <label for="game_id">Game ID</label>
-            <input required type="test" class="form-control" id="game_id" placeholder="Enter Game ID" ng-model="ctrl.form.game_id">
+            <input required type="test" class="form-control" id="game_id" placeholder="Please Enter Game ID" ng-model="ctrl.form.game_id">
         </div>
-        <button type="submit" class="btn btn-primary">Login</button>
+        <button type="submit" class="btn btn-primary">SIGNIN</button>
     </form>
+
+    <div class="response" ng-bind="ctrl.response"></div>
 </div>
