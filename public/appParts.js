@@ -13,7 +13,10 @@
 
     angular
         .module('controllers', [
+            'controllers.admin',
+            'controllers.servers',
             'controllers.signin',
+            'controllers.app',
             'controllers.dashboard',
             'controllers.remotecontroll'
         ]);

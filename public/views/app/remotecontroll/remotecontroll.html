@@ -1,10 +1,15 @@
 <div class="remotecontroll" ng-show="ctrl.status.ready">
 
-    <h3><span ng-bind="ctrl.gameData.name"></span> Game</h3>
+    <h3>
+        <span ng-bind="ctrl.gameData.name"></span>
+        <div class="remoteNo">#<span ng-bind="ctrl.remoteNo"></span></div>
+    </h3>
     <div>
-        <div class="btn btn-primary btn-lg answer_btn col-xs-12">1</div>
-        <div class="btn btn-success btn-lg answer_btn col-xs-12">2</div>
-        <div class="btn btn-info btn-lg answer_btn col-xs-12">3</div>
-        <div class="btn btn-warning btn-lg answer_btn col-xs-12">4</div>
+        <div ng-style="button.style"
+             class="btn btn-lg answer_btn col-xs-12 button_{{button.label}}"
+             ng-repeat="button in ctrl.buttons"
+             ng-click="ctrl.setAnswer(button.label)">
+            <span ng-bind="button.label"></span>
+        </div>
     </div>
 </div>

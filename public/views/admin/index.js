@@ -4,12 +4,12 @@
         .module('lpWebRemote')
         .config(['$stateProvider', function ($stateProvider) {
             $stateProvider
-                .state('app', {
+                .state('admin', {
                     abstract: true,
-                    controller: 'AppCtrl',
-                    controllerAs: 'appCtrl',
-                    url: '/app',
-                    templateUrl: 'views/app/app.html'
+                    controller: 'AdminCtrl',
+                    controllerAs: 'adminCtrl',
+                    url: '/admin',
+                    templateUrl: 'views/admin/admin.html'
                 })
         }]);
 

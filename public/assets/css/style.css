@@ -4,6 +4,12 @@ html, body {
 body {
   color: #fff; }
 
+#ui-view {
+  height: 100%; }
+
+.clr {
+  clear: both; }
+
 #page-loading {
   position: fixed;
   top: 0px;
@@ -32,26 +38,76 @@ body {
 
 header {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+  padding: 5px 0px; }
   header img {
     width: 100%;
     max-width: 350px;
     max-height: 100px; }
 
-.signin {
-  margin-top: 10%; }
-  .signin .btn {
-    width: 100%; }
-  .signin .response {
-    margin-top: 10px;
-    color: red; }
+.signin form {
+  margin-top: 20px; }
+
+.signin .btn {
+  width: 100%; }
+
+.signin .response {
+  margin-top: 10px;
+  color: red; }
 
 .view-container {
   margin-top: 20px; }
 
 .remotecontroll {
-  margin-top: 50px; }
+  margin-top: 30px; }
+  .remotecontroll .remoteNo {
+    float: right; }
+  .remotecontroll .button_1 {
+    background-color: #337ab7; }
+  .remotecontroll .button_2 {
+    background-color: #419641; }
+  .remotecontroll .button_3 {
+    background-color: #2aabd2; }
+  .remotecontroll .button_4 {
+    background-color: #eb9316; }
   .remotecontroll h3 {
-    text-align: center; }
+    text-align: left;
+    margin-bottom: 20px; }
   .remotecontroll .answer_btn {
-    margin-bottom: 10px; }
+    margin-bottom: 10px;
+    color: #fff; }
+    .remotecontroll .answer_btn:focus,
+    .remotecontroll .answer_btn.focus,
+    .remotecontroll .answer_btn:active,
+    .remotecontroll .answer_btn.active {
+      background: none !important;
+      color: #fff !important;
+      background-color: gray !important; }
+
+.container.admin {
+  width: 100%;
+  min-height: inherit;
+  height: inherit;
+  max-width: inherit; }
+
+.servers .server {
+  border: 1px solid #fff;
+  padding: 5px;
+  margin-bottom: 10px;
+  cursor: pointer; }
+  .servers .server:hover {
+    border-color: gray; }
+  .servers .server.selected {
+    color: gray;
+    border-color: gray; }
+
+.servers .clickTable {
+  width: 100%;
+  border: 1px solid #fff; }
+  .servers .clickTable table {
+    width: 100%; }
+  .servers .clickTable .scrl {
+    display: block;
+    height: 300px;
+    overflow-x: hidden;
+    overflow-y: auto; }

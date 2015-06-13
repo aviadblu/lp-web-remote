@@ -8,6 +8,9 @@ angular.module('factories.game_server',[])
             },
             getServer: function(game_id) {
                 return $http.get("/api/server/data?id=" + game_id);
+            },
+            getAllServers: function() {
+                return $http.get("/api/server/list");
             }
         };
         return services;

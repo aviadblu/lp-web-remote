@@ -1,0 +1,30 @@
+<div class="servers">
+
+    <div class="col-lg-3">
+        <div ng-click="ctrl.selectServer(server_id);" class="server" ng-class="{selected: server_id === ctrl.selected_server}" ng-repeat="(server_id, server) in ctrl.servers">
+            <h4 ng-bind="server.name"></h4>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <div class="clickTable">
+            <table>
+                <tr>
+                    <th style="width: 80px;">Remote</th>
+                    <th>Time</th>
+                    <th style="width: 80px;">Key</th>
+                </tr>
+            </table>
+            <div class="scrl">
+                <table>
+                    <tr ng-repeat="row in ctrl.pressData()">
+                        <td style="width: 80px;" ng-bind="row.remote"></td>
+                        <td ng-bind="row.timestamp"></td>
+                        <td style="width: 80px;" ng-bind="row.key"></td>
+                    </tr>
+                </table>
+            </div>
+
+        </div>
+    </div>
+    <br class="clr" />
+</div>

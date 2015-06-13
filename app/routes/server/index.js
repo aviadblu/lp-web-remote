@@ -5,8 +5,41 @@ var servers_db = require("./db");
 var app = config.app;
 var io = app.io;
 
+
+var getRemoteData = function(index) {
+    var digits = 4;
+    var No = index + 1;
+    var str = No + "";
+    while (str.length < digits) str = "0" + str;
+    return str;
+};
+
+
+var remotesClickMap = {};
+var setClick = function(remoteClickData) {
+    if(!remotesClickMap[remoteClickData.gameID])
+        remotesClickMap[remoteClickData.gameID] = [];
+
+    var c_data = {
+        remote: getRemoteData(remoteClickData.pos),
+        key: remoteClickData.key,
+        timestamp:  new Date().getTime()
+    };
+
+    remotesClickMap[remoteClickData.gameID].push(c_data);
+
+
+    io.emit('press_data', remotesClickMap);
+
+};
+
 io.on('connection', function (socket) {
     console.log("someone connected to sync");
+
+    socket.on('remotePress', function (data) {
+        setClick(data);
+    });
+
 });
 
 

@@ -1,0 +1,34 @@
+.servers {
+
+
+  .server {
+    border: 1px solid #fff;
+    padding:5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: gray;
+    }
+
+    &.selected {
+      color: gray;
+      border-color: gray;
+    }
+  }
+
+  .clickTable {
+    width: 100%;
+    border:1px solid #fff;
+    table {
+      width:100%;
+    }
+
+    .scrl {
+      display: block;
+      height:300px;
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+}

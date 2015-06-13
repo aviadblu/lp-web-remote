@@ -17,9 +17,9 @@ gulp.task('styles', function() {
         .pipe(gulp.dest('./public/assets/css'))
         .pipe(rename({suffix: '.min'}))
         .pipe(minifycss())
-        .pipe(gulp.dest('css'));
+        .pipe(gulp.dest('./public/assets/css'));
 });
 
 gulp.task('watch', function() {
-    gulp.watch('./public/assets/scss/*.scss', ['styles']);
+    gulp.watch(['./public/assets/scss/*.scss', './public/views/**/*.scss', './public/views/**/**/*.scss'], ['styles']);
 });
